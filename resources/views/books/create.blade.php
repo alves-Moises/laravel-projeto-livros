@@ -7,7 +7,8 @@
     <title>Books</title>
 </head>
 <body>
-    <form action="">
+    <form action="{{ route('register_book') }}" method="POST">
+        @csrf
         <label for="">Nome do Livro</label><br>
         <input type="text" name="name"><br>
         <label for="">Autor</label><br>

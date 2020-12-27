@@ -18,3 +18,4 @@ use App\Http\Controllers\BooksController;
 // });
 
 Route::get('/create', [BooksController::class, 'create']);
+Route::post('/create', [BooksCOntroller::class, 'store'])->name('register_book');
