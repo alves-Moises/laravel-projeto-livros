@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Book;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 class BooksController extends Controller
 {
     public function create(){
@@ -11,12 +12,12 @@ class BooksController extends Controller
     }
     public function store(Request $request)
     {
-        Book::Create([
-            'name' => $request->name;
-            'author' => $request->author;
-            'launch' => $request->launch;
-            'status' => $request->status;
-            'classification' => $request->classification;
+        Book::create([
+            'name' => $request->name,
+            'author' => $request->author,
+            'launch' => $request->launch,
+            'status' => $request->status,
+            'classification' => $request->classification
         ]);
 
         return "Book added succefull!";
